@@ -1,7 +1,7 @@
 function Story(props) {
   // render
   const renderStory = () => {
-    return null // implement changes
+    return props.text // implement changes
   }
 
   return (

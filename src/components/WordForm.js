@@ -1,12 +1,16 @@
 function WordForm(props) {
   // render
-  const renderInputs = () => {
-    return null // implement changes
+  function handleChange(index,value){
+    console.log(index, value)
+    props.updateMadLibWord(index,value)
   }
+    
   
   return (
     <div id="div-words">
-      { renderInputs() }
+      {props.words.map((word,index) => {
+        return (<input key={word.key} placeholder={word.label} onChange={event=>props.updateMadLibWord(index,event.target.value)}/>)
+      })}
     </div>
   )
 }
